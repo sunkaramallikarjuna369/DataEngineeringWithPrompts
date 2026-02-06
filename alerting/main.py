@@ -14,7 +14,6 @@ Deployment:
     --set-env-vars PROJECT_ID=<project>,DATASET=feedback_intelligence,THRESHOLD=0.30,ALERT_EMAIL=ops@company.com
 """
 
-import json
 import logging
 import os
 from typing import Any, Dict

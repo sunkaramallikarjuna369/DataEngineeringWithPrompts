@@ -99,7 +99,7 @@ def run():
         )
 
         (
-            (invalid_records, llm_failure)
+            [invalid_records, llm_failure]
             | "FlattenFailures" >> beam.Flatten()
             | "WriteDeadLetter" >> WriteToDeadLetter(
                 output_path=known_args.dead_letter_bucket
