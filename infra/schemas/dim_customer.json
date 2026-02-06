@@ -1,0 +1,11 @@
+[
+  {"name": "customer_id", "type": "STRING", "mode": "REQUIRED", "description": "Unique customer identifier"},
+  {"name": "customer_name", "type": "STRING", "mode": "NULLABLE", "description": "Full name of the customer"},
+  {"name": "email", "type": "STRING", "mode": "NULLABLE", "description": "Customer email address"},
+  {"name": "region", "type": "STRING", "mode": "NULLABLE", "description": "Geographic region of the customer"},
+  {"name": "country", "type": "STRING", "mode": "NULLABLE", "description": "Country code (ISO 3166-1 alpha-2)"},
+  {"name": "signup_date", "type": "DATE", "mode": "NULLABLE", "description": "Date when the customer signed up"},
+  {"name": "tier", "type": "STRING", "mode": "NULLABLE", "description": "Customer tier (free, basic, premium, enterprise)"},
+  {"name": "is_active", "type": "BOOLEAN", "mode": "NULLABLE", "description": "Whether the customer account is active"},
+  {"name": "updated_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "Last update timestamp for this dimension record"}
+]

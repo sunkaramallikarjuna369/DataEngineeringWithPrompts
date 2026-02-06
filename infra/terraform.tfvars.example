@@ -1,0 +1,4 @@
+project_id  = "my-gcp-project-id"
+region      = "us-central1"
+bq_location = "US"
+env         = "dev"

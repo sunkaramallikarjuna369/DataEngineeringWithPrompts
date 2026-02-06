@@ -1,0 +1,9 @@
+[
+  {"name": "product_id", "type": "STRING", "mode": "REQUIRED", "description": "Unique product identifier"},
+  {"name": "product_name", "type": "STRING", "mode": "REQUIRED", "description": "Display name of the product"},
+  {"name": "product_category", "type": "STRING", "mode": "NULLABLE", "description": "Product category (e.g., SaaS, Mobile, Hardware)"},
+  {"name": "product_line", "type": "STRING", "mode": "NULLABLE", "description": "Product line or family"},
+  {"name": "launch_date", "type": "DATE", "mode": "NULLABLE", "description": "Date the product was launched"},
+  {"name": "is_active", "type": "BOOLEAN", "mode": "NULLABLE", "description": "Whether the product is currently active"},
+  {"name": "updated_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "Last update timestamp for this dimension record"}
+]

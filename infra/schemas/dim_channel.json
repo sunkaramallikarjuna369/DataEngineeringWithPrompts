@@ -1,0 +1,7 @@
+[
+  {"name": "channel_id", "type": "STRING", "mode": "REQUIRED", "description": "Unique channel identifier"},
+  {"name": "channel_name", "type": "STRING", "mode": "REQUIRED", "description": "Display name of the channel"},
+  {"name": "channel_type", "type": "STRING", "mode": "REQUIRED", "description": "Type: app_review, web_form, email, support_ticket, social_media"},
+  {"name": "is_active", "type": "BOOLEAN", "mode": "NULLABLE", "description": "Whether the channel is currently active"},
+  {"name": "created_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "When this channel was onboarded"}
+]

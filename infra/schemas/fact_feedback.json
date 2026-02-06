@@ -1,0 +1,18 @@
+[
+  {"name": "feedback_id", "type": "STRING", "mode": "REQUIRED", "description": "Unique identifier for the feedback record"},
+  {"name": "customer_id", "type": "STRING", "mode": "REQUIRED", "description": "FK to dim_customer"},
+  {"name": "product_id", "type": "STRING", "mode": "NULLABLE", "description": "FK to dim_product"},
+  {"name": "channel_id", "type": "STRING", "mode": "REQUIRED", "description": "FK to dim_channel"},
+  {"name": "feedback_text", "type": "STRING", "mode": "REQUIRED", "description": "Raw feedback text from the customer"},
+  {"name": "created_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Original timestamp when feedback was submitted"},
+  {"name": "feedback_date", "type": "DATE", "mode": "REQUIRED", "description": "Date extracted from created_at, used for partitioning"},
+  {"name": "hour_of_day", "type": "INT64", "mode": "NULLABLE", "description": "Hour extracted from created_at (0-23)"},
+  {"name": "day_of_week", "type": "STRING", "mode": "NULLABLE", "description": "Day of week extracted from created_at"},
+  {"name": "is_weekend", "type": "BOOLEAN", "mode": "NULLABLE", "description": "Whether created_at falls on a weekend"},
+  {"name": "locale", "type": "STRING", "mode": "NULLABLE", "description": "Locale of the feedback (e.g., en-US)"},
+  {"name": "sentiment_label", "type": "STRING", "mode": "REQUIRED", "description": "LLM-classified sentiment: very_negative, negative, neutral, positive, very_positive"},
+  {"name": "sentiment_score", "type": "FLOAT64", "mode": "NULLABLE", "description": "Numeric confidence score from the LLM (0.0-1.0)"},
+  {"name": "topic", "type": "STRING", "mode": "REQUIRED", "description": "LLM-classified topic category"},
+  {"name": "summary", "type": "STRING", "mode": "NULLABLE", "description": "LLM-generated 1-2 sentence summary"},
+  {"name": "ingestion_ts", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Timestamp when the record was ingested into BigQuery"}
+]
